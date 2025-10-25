@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<!-- Package Info -->
+	<PropertyGroup>
+		<PackageId>SAS.HierarchicalProgress</PackageId>
+		<Version>0.3.0</Version>
+		<Authors>Nick Daria</Authors>
+		<Description>A .NET library for hierarchical procedure execution and progress reporting in complex multi-step workflows consisting of indeterminate, percentage-based, and count-based progress types</Description>
+		<PackageProjectUrl>https://github.com/Silicon-Autosport/SAS.HierarchicalProgress</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Silicon-Autosport/SAS.HierarchicalProgress</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Copyright>2025 Nick Daria, Silicon Autosport</Copyright>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageTags>progress</PackageTags>
+		<Title>Hierarchical Progress</Title>
+		<Company>Silicon Autosport</Company>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="..\assets\icon.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>
