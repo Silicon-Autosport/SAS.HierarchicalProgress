@@ -14,7 +14,7 @@ namespace SAS.HierarchicalProgress.StepProgress
         public PercentageStepProgress(IStepBase step)
         {
             this.Step = step;
-            this.Current = 0.00M;
+            this.ProgressRatio = 0.00M;
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace SAS.HierarchicalProgress.StepProgress
         public PercentageStepProgress(IStepBase step, decimal ratio)
         {
             this.Step = step;
-            this.Current = ratio;
+            this.ProgressRatio = ratio;
         }
 
         /// <summary>
@@ -34,18 +34,17 @@ namespace SAS.HierarchicalProgress.StepProgress
         public IStepBase Step { get; private set; }
 
         /// <summary>
-        /// Current ratio value (expected 0.00 - 1.00)
-        /// </summary>
-        public decimal Current { get; private set; }
-
-        /// <summary>
-        /// Total ratio value (1.00)
-        /// </summary>
-        public decimal Total { get; private set; } = 1.00M;
-
-        /// <summary>
         /// Simple linear progress calculation
         /// </summary>
-        public virtual decimal ProgressRatio => Current / Total;
+        public decimal ProgressRatio { get; private set; }
+
+        /// <summary>
+        /// Human readable representation
+        /// </summary>
+        /// <returns>PR% (ex: 67%)</returns>
+        public override string ToString()
+        {
+            return $"{(ProgressRatio * 100.00M).ToString("F2")}%";
+        }
     }
 }

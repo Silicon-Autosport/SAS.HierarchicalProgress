@@ -20,5 +20,14 @@ namespace SAS.HierarchicalProgress.StepProgress
         /// The step associated with this progress instance
         /// </summary>
         public IStepBase Step { get; private set;  }
+
+        /// <summary>
+        /// Human readable representation
+        /// </summary>
+        /// <returns>"In Progress"</returns>
+        public override string ToString()
+        {
+            return "In Progress";
+        }
     }
 }

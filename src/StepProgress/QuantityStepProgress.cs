@@ -7,6 +7,8 @@ namespace SAS.HierarchicalProgress.StepProgress
     /// </summary>
     public class QuantityStepProgress : IStepProgressDeterminate
     {
+
+
         /// <summary>
         /// Quantity-based progress reporting
         /// </summary>
@@ -65,5 +67,14 @@ namespace SAS.HierarchicalProgress.StepProgress
         /// Simple linear progress calculation
         /// </summary>
         public virtual decimal ProgressRatio => Current / Total;
+
+        /// <summary>
+        /// Human readable representation
+        /// </summary>
+        /// <returns>CUR/TOT (ex: 6/7)</returns>
+        public override string ToString()
+        {
+            return $"{Current}/{Total}";
+        }
     }
 }

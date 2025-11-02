@@ -9,7 +9,7 @@
 	<!-- Package Info -->
 	<PropertyGroup>
 		<PackageId>SAS.HierarchicalProgress</PackageId>
-		<Version>0.3.0</Version>
+		<Version>1.2.0</Version>
 		<Authors>Nick Daria</Authors>
 		<Description>A .NET library for hierarchical procedure execution and progress reporting in complex multi-step workflows consisting of indeterminate, percentage-based, and count-based progress types</Description>
 		<PackageProjectUrl>https://github.com/Silicon-Autosport/SAS.HierarchicalProgress</PackageProjectUrl>
